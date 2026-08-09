@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pratik Academy - Learn industry-ready technical courses in Full-Stack Web Development, Data Science, AI, and DevOps. Sell your courses or upskill today.">
+  <title>Pratik Academy | Technical Mastery & High-Performance Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Decorative Blurs -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <div class="logo" onclick="app.navigateTo('home')">
+        Pratik Academy
+        <span class="logo-dot"></span>
+      </div>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><span class="nav-link active" onclick="app.navigateTo('home')" id="nav-link-home">Home</span></li>
+        <li><span class="nav-link" onclick="app.navigateTo('courses')" id="nav-link-courses">Courses</span></li>
+        <li><span class="nav-link" onclick="app.navigateTo('dashboard')" id="nav-link-dashboard">My Learning</span></li>
+        <li><span class="nav-link" onclick="app.navigateTo('instructor')" id="nav-link-instructor">Instructor Panel</span></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-secondary" onclick="app.navigateTo('courses')">Explore</button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       VIEW: HOME (LANDING PAGE)
+       ========================================== -->
+  <main class="app-view active-view" id="view-home">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Master the Future of <span class="gradient-text">Technology</span></h1>
+          <p>Supercharge your engineering career with world-class, project-driven technical courses. Build production apps, master cloud platforms, and program AI algorithms under expert guidance.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="app.navigateTo('courses')">View Technical Courses</button>
+            <button class="btn btn-secondary" onclick="app.navigateTo('dashboard')">Student Portal</button>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="sphere-container">
+            <div class="glowing-sphere"></div>
+            
+            <div class="orbit-ring orbit-ring-1">
+              <div class="orbiting-dot"></div>
+            </div>
+            
+            <div class="orbit-ring orbit-ring-2">
+              <div class="orbiting-dot" style="animation-delay: -10s; background-color: var(--primary); box-shadow: 0 0 12px var(--primary);"></div>
+            </div>
+
+            <!-- Floating Glass Panels -->
+            <div class="glass-floating-card f-card-1">
+              <div class="f-card-icon">&lt;/&gt;</div>
+              <div class="f-card-text">
+                <div>Web Dev Mastery</div>
+                <div>10+ Projects</div>
+              </div>
+            </div>
+
+            <div class="glass-floating-card f-card-2">
+              <div class="f-card-icon" style="color: var(--secondary); background: rgba(6, 182, 212, 0.15);">AI</div>
+              <div class="f-card-text">
+                <div>TensorFlow & Deep Learning</div>
+                <div>Advanced Models</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted Partners Ticker -->
+    <section class="brand-ticker">
+      <div class="ticker-wrap">
+        <div class="ticker-content">
+          <div class="ticker-item"><span>🚀</span> GOOGLE CLOUD</div>
+          <div class="ticker-item"><span>💎</span> MICROSOFT AZURE</div>
+          <div class="ticker-item"><span>⚙️</span> AMAZON WEB SERVICES</div>
+          <div class="ticker-item"><span>🛠️</span> DOCKER ENTERPRISE</div>
+          <div class="ticker-item"><span>⚛️</span> META DEVELOPERS</div>
+          <div class="ticker-item"><span>📦</span> GITHUB PARNERS</div>
+          <!-- Repeat for smooth scrolling loop -->
+          <div class="ticker-item"><span>🚀</span> GOOGLE CLOUD</div>
+          <div class="ticker-item"><span>💎</span> MICROSOFT AZURE</div>
+          <div class="ticker-item"><span>⚙️</span> AMAZON WEB SERVICES</div>
+          <div class="ticker-item"><span>🛠️</span> DOCKER ENTERPRISE</div>
+          <div class="ticker-item"><span>⚛️</span> META DEVELOPERS</div>
+          <div class="ticker-item"><span>📦</span> GITHUB PARNERS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="features-section section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose Pratik Academy?</h2>
+          <p>We provide a premium, structured learning ecosystem packed with actual source-code repositories and real-world infrastructure sandboxes.</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="glass-panel feature-card">
+            <div class="feature-icon-wrapper">
+              <span>💻</span>
+            </div>
+            <h3>Hands-On Code Sandbox</h3>
+            <p>Write, compile, and run code directly in your browser. Build fully-featured repositories and host them on real cloud providers.</p>
+          </div>
+          
+          <div class="glass-panel feature-card">
+            <div class="feature-icon-wrapper" style="color: var(--secondary);">
+              <span>🛡️</span>
+            </div>
+            <h3>DevOps Infrastructure</h3>
+            <p>Deploy containers, orchestrate Kubernetes clusters, and build automated CI/CD deployment pipelines using modern pipelines.</p>
+          </div>
+          
+          <div class="glass-panel feature-card">
+            <div class="feature-icon-wrapper" style="color: #ec4899;">
+              <span>📊</span>
+            </div>
+            <h3>Curriculum Designed by Experts</h3>
+            <p>Structured, industry-approved roadmaps tailored to convert student concepts into core, professional engineer skills.</p>
+          </div>
+        </div>
+
+        <!-- Custom stats highlight -->
+        <div class="glass-panel stats-banner">
+          <div class="stat-item">
+            <h3>15K+</h3>
+            <p>Students Graduated</p>
+          </div>
+          <div class="stat-item">
+            <h3>4.8★</h3>
+            <p>Average Course Rating</p>
+          </div>
+          <div class="stat-item">
+            <h3>120+</h3>
+            <p>Corporate Partners</p>
+          </div>
+          <div class="stat-item">
+            <h3>94%</h3>
+            <p>Placement Success</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section class="featured-courses section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Technical Courses</h2>
+          <p>Explore some of our highly-rated technical programs in Full-Stack Web Development, Data Science, and DevOps.</p>
+        </div>
+        <div class="courses-grid" id="featured-courses-grid">
+          <!-- Dynamically inserted by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+          <button class="btn btn-secondary" onclick="app.navigateTo('courses')">Browse All Courses</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       VIEW: COURSES CATALOG
+       ========================================== -->
+  <main class="app-view" id="view-courses">
+    <section class="courses-catalog section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Course Catalog</h2>
+          <p>Discover structured, deep-dive courses on high-demand modern technology frameworks, backend engineering, and system design.</p>
+        </div>
+
+        <!-- Course Filters and Search -->
+        <div class="filters-wrapper">
+          <div class="filter-categories" id="filter-categories">
+            <button class="filter-btn active" onclick="app.filterCourses('all')">All Tech</button>
+            <button class="filter-btn" onclick="app.filterCourses('development')">Development</button>
+            <button class="filter-btn" onclick="app.filterCourses('data-science')">AI & Data Science</button>
+            <button class="filter-btn" onclick="app.filterCourses('devops')">DevOps & Cloud</button>
+            <button class="filter-btn" onclick="app.filterCourses('programming')">Programming</button>
+          </div>
+          <div class="search-bar-wrapper">
+            <input type="text" placeholder="Search tech courses..." class="search-input" id="courses-search" oninput="app.searchCourses(this.value)">
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+
+        <div class="courses-grid" id="catalog-courses-grid">
+          <!-- Dynamically filled with all course data -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       VIEW: STUDENT PORTAL (LEARNING PORTAL)
+       ========================================== -->
+  <main class="app-view" id="view-dashboard">
+    <section class="dashboard-view section-spacing">
+      <div class="container">
+        <div class="section-header" style="text-align: left; margin-bottom: 20px;">
+          <h2>Student Portal</h2>
+          <p>Access your enrolled courses, view syllabus details, watch video lessons, and track your study progression.</p>
+        </div>
+
+        <!-- Empty state when no courses enrolled -->
+        <div class="glass-panel dashboard-empty" id="dashboard-empty-view">
+          <div class="dashboard-empty-icon">🎓</div>
+          <h3>You aren't enrolled in any courses yet!</h3>
+          <p style="color: var(--text-muted); margin-bottom: 24px;">Explore our technical catalog and join one of our premium programming pipelines.</p>
+          <button class="btn btn-primary" onclick="app.navigateTo('courses')">Explore Courses</button>
+        </div>
+
+        <!-- Portal Dashboard grid -->
+        <div class="dashboard-grid" id="dashboard-active-view" style="display: none;">
+          
+          <!-- Left side: Enrolled Course List -->
+          <div class="dashboard-sidebar">
+            <h4>My Enrolled Courses</h4>
+            <div class="my-courses-list" id="enrolled-courses-list">
+              <!-- Dynamically rendered enrolled courses -->
+            </div>
+          </div>
+
+          <!-- Right side: Classroom Mock Player -->
+          <div class="classroom-player-wrapper">
+            <div class="classroom-video-box">
+              <div class="classroom-mock-player" id="mock-player-container">
+                <div class="player-custom-overlay" id="player-overlay">
+                  <button class="player-play-btn" id="player-play-btn" onclick="app.playMockVideo()">▶</button>
+                  <div class="player-video-title" id="player-video-title">Select a Lesson to Start</div>
+                </div>
+                <!-- Simulated HTML5 Video Player -->
+                <video id="classroom-video-element" controls src=""></video>
+              </div>
+            </div>
+
+            <!-- Syllabus checklist of active classroom -->
+            <div class="classroom-syllabus-panel">
+              <h3 id="classroom-course-title">Course Curriculum Progress</h3>
+              <div class="course-progress-container" style="height: 10px; margin-bottom: 15px;">
+                <div class="course-progress-bar" id="classroom-progress-bar"></div>
+              </div>
+              <div class="classroom-lessons-container" id="classroom-lessons-list">
+                <!-- Dynamically populated lessons check list -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       VIEW: INSTRUCTOR PANEL (ADMIN METRICS)
+       ========================================== -->
+  <main class="app-view" id="view-instructor">
+    <section class="instructor-view section-spacing">
+      <div class="container">
+        <div class="section-header" style="text-align: left; margin-bottom: 20px;">
+          <h2>Instructor Analytics Dashboard</h2>
+          <p>Welcome, Pratik! Monitor sales, track student engagement, and view total revenue metrics for Pratik Academy.</p>
+        </div>
+
+        <!-- Instructor Stats Cards -->
+        <div class="stats-summary-grid">
+          <div class="glass-panel stat-item" style="padding: 24px; text-align: left;">
+            <p style="font-size: 0.8rem; text-transform: uppercase;">Total Revenue</p>
+            <h3 style="font-size: 2.2rem; color: var(--secondary);" id="admin-total-revenue">₹18,54,200</h3>
+            <span style="font-size: 0.8rem; color: var(--success);">📈 +18% this month</span>
+          </div>
+          
+          <div class="glass-panel stat-item" style="padding: 24px; text-align: left;">
+            <p style="font-size: 0.8rem; text-transform: uppercase;">Active Students</p>
+            <h3 style="font-size: 2.2rem; color: var(--primary);" id="admin-total-students">4,870</h3>
+            <span style="font-size: 0.8rem; color: var(--success);">📈 +12% active today</span>
+          </div>
+
+          <div class="glass-panel stat-item" style="padding: 24px; text-align: left;">
+            <p style="font-size: 0.8rem; text-transform: uppercase;">Courses Sold</p>
+            <h3 style="font-size: 2.2rem;" id="admin-courses-sold">532</h3>
+            <span style="font-size: 0.8rem; color: var(--warning);">⚡ Popular: Web Dev Mastery</span>
+          </div>
+
+          <div class="glass-panel stat-item" style="padding: 24px; text-align: left;">
+            <p style="font-size: 0.8rem; text-transform: uppercase;">Avg. Course Completion</p>
+            <h3 style="font-size: 2.2rem; color: var(--success);">68%</h3>
+            <span style="font-size: 0.8rem; color: var(--success);">📈 High engagement rate</span>
+          </div>
+        </div>
+
+        <!-- Analytics Charts Row -->
+        <div class="sales-analytics-container">
+          <!-- Sales Chart (Mock CSS Visuals) -->
+          <div class="glass-panel chart-card">
+            <div class="chart-header">
+              <h3>Monthly Sales Revenue</h3>
+              <span style="color: var(--secondary); font-size: 0.9rem; font-weight: 600;">Year: 2026</span>
+            </div>
+            <div class="chart-canvas-wrapper" id="sales-chart-wrapper">
+              <div class="chart-bar-column">
+                <div class="chart-bar-filler" style="height: 40%;">
+                  <div class="chart-bar-tooltip">₹85,000</div>
+                </div>
+                <div class="chart-bar-label">Mar</div>
+              </div>
+              <div class="chart-bar-column">
+                <div class="chart-bar-filler" style="height: 55%;">
+                  <div class="chart-bar-tooltip">₹1,12,000</div>
+                </div>
+                <div class="chart-bar-label">Apr</div>
+              </div>
+              <div class="chart-bar-column">
+                <div class="chart-bar-filler" style="height: 48%;">
+                  <div class="chart-bar-tooltip">₹98,000</div>
+                </div>
+                <div class="chart-bar-label">May</div>
+              </div>
+              <div class="chart-bar-column">
+                <div class="chart-bar-filler" style="height: 75%;">
+                  <div class="chart-bar-tooltip">₹1,50,000</div>
+                </div>
+                <div class="chart-bar-label">Jun</div>
+              </div>
+              <div class="chart-bar-column">
+                <div class="chart-bar-filler" style="height: 85%;">
+                  <div class="chart-bar-tooltip">₹1,85,000</div>
+                </div>
+                <div class="chart-bar-label">Jul</div>
+              </div>
+              <div class="chart-bar-column">
+                <div class="chart-bar-filler" style="height: 95%; background: var(--secondary);" id="active-month-bar">
+                  <div class="chart-bar-tooltip" id="active-month-tooltip">₹2,10,000</div>
+                </div>
+                <div class="chart-bar-label" style="font-weight: 700; color: var(--secondary);">Aug</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Popular Courses shares -->
+          <div class="glass-panel chart-card" style="justify-content: flex-start;">
+            <div class="chart-header" style="margin-bottom: 15px;">
+              <h3>Popularity Share</h3>
+            </div>
+            <div class="analytics-list">
+              <div class="analytics-item">
+                <div class="analytics-item-info">
+                  <div class="analytics-item-dot" style="background-color: var(--primary);"></div>
+                  <span>Full-Stack Web Development</span>
+                </div>
+                <span style="font-weight: 700;">45%</span>
+              </div>
+              <div class="analytics-item">
+                <div class="analytics-item-info">
+                  <div class="analytics-item-dot" style="background-color: var(--secondary);"></div>
+                  <span>AI & Data Science Boot Camp</span>
+                </div>
+                <span style="font-weight: 700;">28%</span>
+              </div>
+              <div class="analytics-item">
+                <div class="analytics-item-info">
+                  <div class="analytics-item-dot" style="background-color: #ec4899;"></div>
+                  <span>DevOps & Cloud Engineering</span>
+                </div>
+                <span style="font-weight: 700;">17%</span>
+              </div>
+              <div class="analytics-item">
+                <div class="analytics-item-info">
+                  <div class="analytics-item-dot" style="background-color: #f59e0b;"></div>
+                  <span>Python Automation</span>
+                </div>
+                <span style="font-weight: 700;">10%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Purchases Table -->
+        <div class="glass-panel recent-purchases-table-wrapper">
+          <h3>Recent Student Enrollments</h3>
+          <div style="overflow-x: auto;">
+            <table class="analytics-table">
+              <thead>
+                <tr>
+                  <th>Student Name</th>
+                  <th>Course Title</th>
+                  <th>Date Enrolled</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="admin-enrollments-table-body">
+                <tr>
+                  <td>Rahul Sharma</td>
+                  <td>Full-Stack Web Development Mastery</td>
+                  <td>09-Aug-2026</td>
+                  <td>₹3,499</td>
+                  <td><span class="badge-status badge-success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Priya Patel</td>
+                  <td>AI & Data Science Professional Boot Camp</td>
+                  <td>08-Aug-2026</td>
+                  <td>₹3,999</td>
+                  <td><span class="badge-status badge-success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Anil Kumar</td>
+                  <td>DevOps & Cloud Infrastructure Engineer</td>
+                  <td>06-Aug-2026</td>
+                  <td>₹4,299</td>
+                  <td><span class="badge-status badge-success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Sneha Gupta</td>
+                  <td>Python Automation & Scripting Specialist</td>
+                  <td>05-Aug-2026</td>
+                  <td>₹2,499</td>
+                  <td><span class="badge-status badge-success">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       COURSE DETAIL DRAWER / OVERLAY
+       ========================================== -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="app.closeDrawer()"></div>
+  <div class="drawer-container" id="drawer-container">
+    <div class="drawer-header">
+      <h3 id="drawer-course-title">Course Details</h3>
+      <button class="close-drawer" onclick="app.closeDrawer()">&times;</button>
+    </div>
+    
+    <div class="drawer-body">
+      <div class="drawer-image-banner" id="drawer-graphic">🚀</div>
+      
+      <div class="drawer-meta-pills">
+        <div class="meta-pill"><span>⭐</span> <span id="drawer-rating">4.8</span></div>
+        <div class="meta-pill"><span>⏱️</span> <span id="drawer-duration">45 Hours</span></div>
+        <div class="meta-pill"><span>📚</span> <span id="drawer-lectures">95 Lectures</span></div>
+        <div class="meta-pill"><span>📈</span> <span id="drawer-level">Intermediate</span></div>
+      </div>
+      
+      <h2 style="font-size: 1.6rem; margin-bottom: 12px;" id="drawer-course-full-title">Full Course Title</h2>
+      <p style="color: var(--text-muted); margin-bottom: 24px;" id="drawer-description">Course Description text goes here.</p>
+      
+      <h4 style="margin-bottom: 10px;">Key Skills You'll Learn:</h4>
+      <div class="course-skills-list" id="drawer-skills-list" style="margin-bottom: 30px;">
+        <!-- Filled dynamically -->
+      </div>
+      
+      <div class="drawer-syllabus-section">
+        <h4>Course Curriculum</h4>
+        <div id="drawer-curriculum-accordions">
+          <!-- Syllabus accordions populated dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="course-price">
+        <span class="price-old" id="drawer-price-old">₹8,999</span>
+        <span class="price-new" id="drawer-price-new">₹2,999</span>
+      </div>
+      <button class="btn btn-primary" id="drawer-enroll-btn">Enroll & Pay Now</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CHECKOUT MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Enrollment Checkout</h3>
+        <button class="close-modal" onclick="app.closeCheckoutModal()">&times;</button>
+      </div>
+
+      <!-- Checkout fields -->
+      <div class="checkout-grid" id="checkout-form-view">
+        <div class="order-summary-box">
+          <h4 style="margin-bottom: 10px;">Order Summary</h4>
+          <div style="display: flex; justify-content: space-between; font-size: 0.95rem; margin-bottom: 8px;">
+            <span id="checkout-summary-title">Full-Stack Web Development</span>
+            <span style="font-weight: 700;" id="checkout-summary-price">₹3,499</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 8px;">
+            <span>Platform Tax & Resources fee</span>
+            <span>Included</span>
+          </div>
+        </div>
+
+        <form class="payment-form-group" id="checkout-billing-form" onsubmit="app.processCheckout(event)">
+          <div class="input-container">
+            <label for="bill-name">Student Full Name</label>
+            <input type="text" id="bill-name" placeholder="Rahul Sharma" class="form-input" required>
+          </div>
+
+          <div class="input-container">
+            <label for="bill-email">Email Address (for course login credentials)</label>
+            <input type="email" id="bill-email" placeholder="rahul@example.com" class="form-input" required>
+          </div>
+
+          <div class="payment-selector" style="display: flex; gap: 20px; border-bottom: 1px solid var(--border-glass); padding-bottom: 10px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+              <input type="radio" name="paymethod" value="card" checked onchange="app.togglePaymentFields('card')"> Credit/Debit Card
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+              <input type="radio" name="paymethod" value="upi" onchange="app.togglePaymentFields('upi')"> UPI Payment
+            </label>
+          </div>
+
+          <!-- Card Details -->
+          <div id="payment-card-inputs" class="payment-fields">
+            <div class="input-container" style="margin-bottom: 15px;">
+              <label for="bill-cardno">Card Number</label>
+              <input type="text" id="bill-cardno" placeholder="4532 8907 4352 1102" class="form-input">
+            </div>
+            <div class="form-row">
+              <div class="input-container">
+                <label for="bill-expiry">Expiry Date</label>
+                <input type="text" id="bill-expiry" placeholder="MM/YY" class="form-input">
+              </div>
+              <div class="input-container">
+                <label for="bill-cvv">CVV</label>
+                <input type="password" id="bill-cvv" placeholder="•••" class="form-input">
+              </div>
+            </div>
+          </div>
+
+          <!-- UPI Details -->
+          <div id="payment-upi-inputs" class="payment-fields" style="display: none;">
+            <div class="input-container">
+              <label for="bill-upi">UPI ID</label>
+              <input type="text" id="bill-upi" placeholder="studentname@okaxis" class="form-input">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 15px; width: 100%;">Pay Securely & Enroll Now</button>
+        </form>
+      </div>
+
+      <!-- Success Screen -->
+      <div class="checkout-success-view" id="checkout-success-view">
+        <div class="success-check-icon">✓</div>
+        <h2>Payment Successful!</h2>
+        <p style="color: var(--text-muted); margin: 15px 0 30px 0;">Welcome to Pratik Academy. Your courses are ready in your Student Portal.</p>
+        <button class="btn btn-accent" onclick="app.closeCheckoutModal(true)">Go to My Learning Portal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="logo" style="margin-bottom: 10px;">
+            Pratik Academy
+            <span class="logo-dot"></span>
+          </div>
+          <p>Empowering engineers with high-performance course content, real-world deployment sandboxes, and premium technical curricula.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Course Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="app.navigateTo('courses'); app.filterCourses('development')">Full-Stack Development</a></li>
+            <li><a href="#" onclick="app.navigateTo('courses'); app.filterCourses('data-science')">Data Science & AI</a></li>
+            <li><a href="#" onclick="app.navigateTo('courses'); app.filterCourses('devops')">DevOps & Cloud Systems</a></li>
+            <li><a href="#" onclick="app.navigateTo('courses'); app.filterCourses('programming')">Python Automation</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="app.navigateTo('home')">Home Page</a></li>
+            <li><a href="#" onclick="app.navigateTo('courses')">Course Catalog</a></li>
+            <li><a href="#" onclick="app.navigateTo('dashboard')">Student Portal</a></li>
+            <li><a href="#" onclick="app.navigateTo('instructor')">Instructor Analytics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Stay Updated</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Get free coding tips and product announcements direct to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+            <input type="email" placeholder="Your engineering email" class="newsletter-input" required>
+            <button type="submit" class="btn btn-primary" style="padding: 10px 16px;">Join</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pratik Academy. All Rights Reserved. Built with precision for tech professionals.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="Github">🐙</a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">🔗</a>
+          <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-icon" aria-label="YouTube">📺</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="courses.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
